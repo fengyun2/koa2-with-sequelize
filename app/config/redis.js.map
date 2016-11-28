@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/config/redis.js"],"names":[],"mappings":"aAAA,OAAO,OAAP,GAAiB;AACb,UAAM,WADO;AAEb,UAAM,IAFO,EAAjB","file":"redis.js","sourcesContent":["module.exports = {\r\n    host: '127.0.0.1',\r\n    port: 6379\r\n}\r\n"]}

@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "name": "koa2-blog",
+        "script": "www/production.js",
+        "exec_mode": "cluster",
+        "max_memory_restart": "1G",
+        "autorestart": true,
+        "node_args": [],
+        "args": [],
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/config/mongodb.js"],"names":[],"mappings":"aAAA,IAAI,SAAS;AACT,UAAM,WADG;AAET,UAAM,KAFG;AAGT,cAAU,MAHD,EAAb;;;AAMA,OAAO,OAAP,GAAiB,MAAjB","file":"mongodb.js","sourcesContent":["var config = {\r\n    host: '127.0.0.1',\r\n    port: 27017,\r\n    database: 'koa2'\r\n}\r\n\r\nmodule.exports = config\r\n"]}

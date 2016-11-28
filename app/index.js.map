@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":[],"mappings":"AAAA;;;;;;;AAOA,a;;AAEA,4B","file":"index.js","sourcesContent":["/*\r\n* @Author: fengyun2\r\n* @Date:   2016-07-17 21:27:29\r\n* @Last Modified by:   fengyun2\r\n* @Last Modified time: 2016-07-17 21:58:34\r\n*/\r\n\r\n'use strict';\r\n\r\nimport app from './app'\r\nexport default app\r\n"]}
