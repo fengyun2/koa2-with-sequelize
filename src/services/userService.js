@@ -1,6 +1,4 @@
-///<reference path="../../typings/index.d.ts" />
-
-import User from '../models/userModel';
+import User from '../models/mongodb/userModel'
 
 /**
  * [注册]
@@ -8,7 +6,7 @@ import User from '../models/userModel';
  * @return {[type]}         [description]
  */
 const register = (options) => {
-    return User.save(options);
+    return User.save(options)
 }
 
 const login = (user) => {
@@ -18,23 +16,23 @@ const login = (user) => {
 const checkIsExists = (conditions) => {
     return new Promise((resolve, reject) => {
         try {
-            const result = User.findOne(conditions);
+            const result = User.findOne(conditions)
             if (!result) {
                 return reject({
                     err: '',
                     message: '没有此用户!',
                     status: -99,
-                });
+                })
             }
-            return resolve(result);
+            return resolve(result)
         } catch (err) {
             return reject({
                 err: err.errors,
                 message: '查询出错!',
                 status: -99,
-            });
+            })
         }
-    });
+    })
 }
 export default {
     register,

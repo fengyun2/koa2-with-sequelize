@@ -1,5 +1,3 @@
-///<reference path="../../typings/index.d.ts" />
-
 import blogService from '../services/blogService.js';
 
 const add = async(ctx, next) => {
