@@ -1,27 +1,27 @@
 import {sequelize, Sequelize} from './mysql'
-
+import Account from './account'
 const User = sequelize.define(
   'user', // 表名(小写),(生成时, 会自动转换为复数形式)
   // 字段定义
   {
-    'user_id': { // 主键
-      'type': Sequelize.CHAR(10),
-      'allowNull': false,
-      'unique': true
-    },
+    // 'user_id': { // 主键
+    //   'type': Sequelize.CHAR(10),
+    //   'allowNull': false,
+    //   'unique': true
+    // },
     'name': {
-      'type': Sequelize.CHAR(10),
+      'type': Sequelize.CHAR(20),
       'allowNull': false,
       'unique': true
     },
     'nick_name': {
-      'type': Sequelize.CHAR(10),
-      'allowNull': false
-    },
-    'email': {
       'type': Sequelize.CHAR(50),
       'allowNull': true
     },
+    // 'email': {
+    //   'type': Sequelize.CHAR(50),
+    //   'allowNull': true
+    // },
     'department': {
       'type': Sequelize.CHAR(64),
       'allowNull': true
@@ -48,6 +48,18 @@ const User = sequelize.define(
   }
 )
 
-User.sync() //创建表
+// User.sync() //创建表
+// const createRes = User.sync({force: true}) //创建表
+
+// createRes.then(res => {
+//   console.log('create table user 》》》', res)
+// }).catch(err => {console.error('create table user error')})
+
+// 此时User实例对象拥有getAccount、setAccount、addACCount 方法
+// setTimeout(() => {
+  User.hasOne(Account)
+  Account.belongsTo(User)
+  // Account.sync({force: true})
+// }, 5000)
 
 export default User
