@@ -44,7 +44,7 @@
     "babel-preset-stage-3": "^6.11.0",
     "babel-runtime": "^6.9.2",
     "bcryptjs": "^2.3.0",
-    "config": "^1.24.0",
+    "config": "^3.3.1",
     "debug": "^2.2.0",
     "is_js": "^0.8.0",
     "jsonwebtoken": "^7.1.9",
